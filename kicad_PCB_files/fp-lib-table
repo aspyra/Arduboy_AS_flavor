@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name arduboy)(type KiCad)(uri ${KIPRJMOD}/arduboy.pretty)(options "")(descr ""))
+)
