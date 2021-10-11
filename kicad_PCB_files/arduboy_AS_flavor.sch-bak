@@ -3123,4 +3123,6 @@ F 5 "C25744-NC" H 8809 864 50  0001 L CNN "LCSC"
 	1    8750 1000
 	1    0    0    -1  
 $EndComp
+Text Notes 3350 7700 0    79   ~ 0
+TODO:\nSchematic - Battery, speaker footprints, physical switch
 $EndSCHEMATC
