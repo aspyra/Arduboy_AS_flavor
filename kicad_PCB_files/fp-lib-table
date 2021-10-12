@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name arduboy)(type KiCad)(uri ${KIPRJMOD}/arduboy.pretty)(options "")(descr ""))
+  (lib (name no_refdes)(type KiCad)(uri ${KIPRJMOD}/no_refdes.pretty)(options "")(descr ""))
 )
