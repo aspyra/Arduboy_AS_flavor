@@ -14,26 +14,14 @@ Comment3 "~~200mA LiPo charging (only PROTECTED LiPos)"
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_ATmega:ATmega32U4-AU U1B1
+L MCU_Microchip_ATmega:ATmega32U4-AU U1
 U 1 1 61600966
 P 1550 2750
-F 0 "U1B1" H 2050 4700 50  0000 C CNN
+F 0 "U1" H 2050 4700 50  0000 C CNN
 F 1 "ATmega32U4-AU" H 2050 4600 50  0000 C CNN
 F 2 "Package_QFP:TQFP-44_10x10mm_P0.8mm" H 1550 2750 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 1550 2750 50  0001 C CNN
 F 4 "C44854" H 2050 4500 50  0000 C CNN "LCSC"
-	1    1550 2750
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCU_Microchip_ATmega:ATmega32U4-MU U1
-U 1 1 61601C30
-P 1550 2750
-F 0 "U1" H 1000 4700 50  0000 C CNN
-F 1 "ATmega32U4-MU" H 1000 4600 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm" H 1550 2750 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7766-8-bit-AVR-ATmega16U4-32U4_Datasheet.pdf" H 1550 2750 50  0001 C CNN
-F 4 "C112161" H 1000 4500 50  0000 C CNN "LCSC"
 	1    1550 2750
 	1    0    0    -1  
 $EndComp
@@ -54,13 +42,11 @@ Wire Wire Line
 	1450 4600 1500 4600
 Wire Wire Line
 	1500 4600 1500 4650
-Connection ~ 1450 4550
 Wire Wire Line
 	1500 4600 1550 4600
 Wire Wire Line
 	1550 4600 1550 4550
 Connection ~ 1500 4600
-Connection ~ 1550 4550
 $Comp
 L Device:C_Small C28
 U 1 1 615F6C68
@@ -113,7 +99,6 @@ F 5 "C25092" V 5100 6700 50  0000 C CNN "LCSC"
 	1    4900 6700
 	0    -1   -1   0   
 $EndComp
-Connection ~ 950  2050
 Wire Wire Line
 	900  2050 950  2050
 $Comp
@@ -203,7 +188,6 @@ F 5 "C13738" V 6450 800 50  0000 R CNN "LCSC"
 $EndComp
 Text GLabel 950  1250 0    50   Input ~ 0
 RST
-Connection ~ 1450 950 
 $Comp
 L power:VCC #PWR03
 U 1 1 61622DA3
@@ -223,8 +207,6 @@ Wire Wire Line
 	1550 900  1650 900 
 Wire Wire Line
 	1650 900  1650 950 
-Connection ~ 1550 950 
-Connection ~ 1650 950 
 Wire Wire Line
 	1650 850  1650 900 
 Connection ~ 1650 900 
@@ -238,17 +220,6 @@ Text GLabel 950  1850 0    50   Input ~ 0
 AREF
 Wire Wire Line
 	5100 6600 4600 6600
-$Comp
-L power:VBUS #PWR056
-U 1 1 6162E31A
-P 2600 5400
-F 0 "#PWR056" H 2600 5250 50  0001 C CNN
-F 1 "VBUS" H 2615 5573 50  0000 C CNN
-F 2 "" H 2600 5400 50  0001 C CNN
-F 3 "" H 2600 5400 50  0001 C CNN
-	1    2600 5400
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C17
 U 1 1 6162F4D4
@@ -341,17 +312,6 @@ F 1 "GND" H 4105 5427 50  0000 C CNN
 F 2 "" H 4100 5600 50  0001 C CNN
 F 3 "" H 4100 5600 50  0001 C CNN
 	1    4100 5600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VBUS #PWR057
-U 1 1 6163A3B6
-P 3100 5400
-F 0 "#PWR057" H 3100 5250 50  0001 C CNN
-F 1 "VBUS" H 3115 5573 50  0000 C CNN
-F 2 "" H 3100 5400 50  0001 C CNN
-F 3 "" H 3100 5400 50  0001 C CNN
-	1    3100 5400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -496,9 +456,9 @@ Text GLabel 950  1450 0    50   Input ~ 0
 XTAL1
 Text GLabel 950  1650 0    50   Input ~ 0
 XTAL2
-Text GLabel 7300 850  2    50   Input ~ 0
-XTAL1
 Text GLabel 7300 1050 2    50   Input ~ 0
+XTAL1
+Text GLabel 7300 850  2    50   Input ~ 0
 XTAL2
 Text GLabel 950  2550 0    50   Input ~ 0
 UCAP
@@ -1063,13 +1023,7 @@ Wire Notes Line
 Wire Notes Line
 	9900 2100 9900 4400
 Wire Wire Line
-	10650 3500 10650 3600
-Wire Wire Line
-	10550 3500 10650 3500
-Wire Wire Line
-	10050 3350 10050 3600
-Wire Wire Line
-	10150 3350 10050 3350
+	10550 3450 10650 3450
 Wire Notes Line
 	9900 4400 11150 4400
 Wire Wire Line
@@ -1102,9 +1056,9 @@ F 5 "1.7-2.3V" V 10050 4050 50  0001 C CNN "Vf"
 $EndComp
 Wire Wire Line
 	10050 3950 10050 3800
-Text GLabel 10550 3500 0    50   Input ~ 0
+Text GLabel 10550 3450 0    50   Input ~ 0
 TX_LED
-Text GLabel 10150 3350 2    50   Input ~ 0
+Text GLabel 10150 3300 2    50   Input ~ 0
 RX_LED
 Wire Notes Line
 	11150 2100 9900 2100
@@ -1165,18 +1119,6 @@ F 2 "Package_TO_SOT_SMD:SOT-23" H 5150 1450 50  0001 C CNN
 F 3 "~" H 4950 1350 50  0001 C CNN
 F 4 "C68978" H 5154 1259 50  0000 L CNN "LCSC"
 	1    4950 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:BAV70 D1
-U 1 1 6175AACC
-P 4200 1100
-F 0 "D1" H 4200 1407 50  0000 C CNN
-F 1 "BAV70" H 4200 1316 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4200 1100 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/BAV70_SER.pdf" H 4200 1100 50  0001 C CNN
-F 4 "C68978" H 4200 1225 50  0000 C CNN "LCSC"
-	1    4200 1100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1757,7 +1699,6 @@ F 3 "" H 2150 3350 50  0001 C CNN
 	1    2150 3350
 	0    -1   -1   0   
 $EndComp
-Connection ~ 2150 3350
 Text GLabel 2150 2450 2    50   Input ~ 0
 SCL_3V3
 Text GLabel 2150 2550 2    50   Input ~ 0
@@ -1829,19 +1770,6 @@ F 3 "~" H 8500 5000 50  0001 C CNN
 F 4 "63mW 1%" H 8559 4955 50  0000 L CNN "Rating"
 F 5 "C25900" H 8559 4864 50  0000 L CNN "LCSC"
 	1    8500 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R18
-U 1 1 61D8B1E4
-P 8000 5000
-F 0 "R18" H 8059 5137 50  0000 L CNN
-F 1 "4.7k" H 8059 5046 50  0000 L CNN
-F 2 "no_refdes:0402_HandSolder" H 8000 5000 50  0001 C CNN
-F 3 "~" H 8000 5000 50  0001 C CNN
-F 4 "63mW 1%" H 8059 4955 50  0000 L CNN "Rating"
-F 5 "C25900" H 8059 4864 50  0000 L CNN "LCSC"
-	1    8000 5000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1977,9 +1905,6 @@ F 5 "C1525" V 3900 1100 50  0000 C CNN "LCSC"
 $EndComp
 Wire Wire Line
 	3150 1100 3700 1100
-Wire Wire Line
-	4500 1100 5050 1100
-Connection ~ 5050 1100
 Wire Notes Line style solid
 	5600 1950 5600 550 
 Wire Notes Line style solid
@@ -2251,7 +2176,7 @@ U 1 1 61AE520E
 P 7900 4150
 F 0 "JP1" V 7946 4102 50  0000 R CNN
 F 1 "Speaker" V 7855 4102 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7900 4150 50  0001 C CNN
+F 2 "arduboy:CPT-12123-81-SMT" H 7900 4150 50  0001 C CNN
 F 3 "~" H 7900 4150 50  0001 C CNN
 	1    7900 4150
 	0    -1   -1   0   
@@ -2575,19 +2500,6 @@ F 1 "VCC" H 6750 3800 50  0000 C CNN
 F 2 "" H 6650 3700 50  0001 C CNN
 F 3 "" H 6650 3700 50  0001 C CNN
 	1    6650 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C11
-U 1 1 61758A93
-P 6650 3850
-F 0 "C11" H 6742 3987 50  0000 L CNN
-F 1 "1uF" H 6742 3896 50  0000 L CNN
-F 2 "no_refdes:0402_HandSolder" H 6650 3850 50  0001 C CNN
-F 3 "~" H 6650 3850 50  0001 C CNN
-F 4 "25V 10%" H 6742 3805 50  0000 L CNN "Rating"
-F 5 "C52923" H 6742 3714 50  0000 L CNN "LCSC"
-	1    6650 3850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3217,4 +3129,106 @@ F 3 "~" H 6150 7600 50  0001 C CNN
 	1    6150 7600
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 616CFDDB
+P 2600 5400
+F 0 "#PWR0101" H 2600 5250 50  0001 C CNN
+F 1 "+5V" H 2615 5573 50  0000 C CNN
+F 2 "" H 2600 5400 50  0001 C CNN
+F 3 "" H 2600 5400 50  0001 C CNN
+	1    2600 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 616D045F
+P 3100 5400
+F 0 "#PWR0102" H 3100 5250 50  0001 C CNN
+F 1 "+5V" H 3115 5573 50  0000 C CNN
+F 2 "" H 3100 5400 50  0001 C CNN
+F 3 "" H 3100 5400 50  0001 C CNN
+	1    3100 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 61758A93
+P 6650 3850
+F 0 "C11" H 6742 3987 50  0000 L CNN
+F 1 "1uF" H 6742 3896 50  0000 L CNN
+F 2 "no_refdes:0402_HandSolder" H 6650 3850 50  0001 C CNN
+F 3 "~" H 6650 3850 50  0001 C CNN
+F 4 "25V 10%" H 6742 3805 50  0000 L CNN "Rating"
+F 5 "C52923" H 6742 3714 50  0000 L CNN "LCSC"
+	1    6650 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 61D8B1E4
+P 8000 5000
+F 0 "R18" H 8059 5137 50  0000 L CNN
+F 1 "4.7k" H 8059 5046 50  0000 L CNN
+F 2 "no_refdes:0402_HandSolder" H 8000 5000 50  0001 C CNN
+F 3 "~" H 8000 5000 50  0001 C CNN
+F 4 "63mW 1%" H 8059 4955 50  0000 L CNN "Rating"
+F 5 "C25900" H 8059 4864 50  0000 L CNN "LCSC"
+	1    8000 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1100 4200 1100
+Wire Wire Line
+	4200 1300 4200 1100
+Connection ~ 4200 1100
+Wire Wire Line
+	4200 1000 4200 1100
+$Comp
+L Device:R_Small R?
+U 1 1 61723BBB
+P 4200 900
+F 0 "R?" H 4259 1037 50  0000 L CNN
+F 1 "10k" H 4259 946 50  0000 L CNN
+F 2 "no_refdes:0402_HandSolder" H 4200 900 50  0001 C CNN
+F 3 "~" H 4200 900 50  0001 C CNN
+F 4 "63mW 1%" H 4259 855 50  0000 L CNN "Rating"
+F 5 "C25744" H 4259 764 50  0000 L CNN "LCSC"
+	1    4200 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 6172BF3F
+P 4200 800
+F 0 "#PWR?" H 4200 650 50  0001 C CNN
+F 1 "+BATT" H 4215 973 50  0000 C CNN
+F 2 "" H 4200 800 50  0001 C CNN
+F 3 "" H 4200 800 50  0001 C CNN
+	1    4200 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small_ALT D?
+U 1 1 6172D750
+P 4850 1100
+F 0 "D?" H 4850 1397 50  0000 C CNN
+F 1 "SM4007PL" H 4850 1306 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 4850 1100 50  0001 C CNN
+F 3 "~" V 4850 1100 50  0001 C CNN
+F 4 "C64898" H 4850 1215 50  0000 C CNN "LCSC"
+	1    4850 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1100 4950 1100
+Wire Wire Line
+	4750 1100 4200 1100
+Connection ~ 5050 1100
+Wire Wire Line
+	10650 3450 10650 3600
+Wire Wire Line
+	10150 3300 10050 3300
+Wire Wire Line
+	10050 3300 10050 3600
 $EndSCHEMATC
