@@ -1023,13 +1023,7 @@ Wire Notes Line
 Wire Notes Line
 	9900 2100 9900 4400
 Wire Wire Line
-	10650 3500 10650 3600
-Wire Wire Line
-	10550 3500 10650 3500
-Wire Wire Line
-	10050 3350 10050 3600
-Wire Wire Line
-	10150 3350 10050 3350
+	10550 3450 10650 3450
 Wire Notes Line
 	9900 4400 11150 4400
 Wire Wire Line
@@ -1062,9 +1056,9 @@ F 5 "1.7-2.3V" V 10050 4050 50  0001 C CNN "Vf"
 $EndComp
 Wire Wire Line
 	10050 3950 10050 3800
-Text GLabel 10550 3500 0    50   Input ~ 0
+Text GLabel 10550 3450 0    50   Input ~ 0
 TX_LED
-Text GLabel 10150 3350 2    50   Input ~ 0
+Text GLabel 10150 3300 2    50   Input ~ 0
 RX_LED
 Wire Notes Line
 	11150 2100 9900 2100
@@ -3231,4 +3225,10 @@ Wire Wire Line
 Wire Wire Line
 	4750 1100 4200 1100
 Connection ~ 5050 1100
+Wire Wire Line
+	10650 3450 10650 3600
+Wire Wire Line
+	10150 3300 10050 3300
+Wire Wire Line
+	10050 3300 10050 3600
 $EndSCHEMATC
