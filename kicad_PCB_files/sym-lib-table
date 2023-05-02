@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name arduboy)(type Legacy)(uri ${KIPRJMOD}/arduboy.lib)(options "")(descr ""))
+  (lib (name "arduboy")(type "Legacy")(uri "${KIPRJMOD}/arduboy.lib")(options "")(descr ""))
+  (lib (name "arduboy_AS_flavor-rescue")(type "Legacy")(uri "${KIPRJMOD}/arduboy_AS_flavor-rescue.lib")(options "")(descr ""))
 )
